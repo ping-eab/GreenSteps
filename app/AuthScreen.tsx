@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from "react-native";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-// import { getAuth } from "firebase/auth";
-// const firebaseConfig = { /* your firebase config */ };
-// const app = initializeApp(firebaseConfig);
-// export const auth = getAuth(app);
+import { getAuth } from "firebase/auth";
+const firebaseConfig = { /* your firebase config */ };
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
 
 const AuthScreen = () => {
   const [isLogin, setIsLogin] = useState(true);
